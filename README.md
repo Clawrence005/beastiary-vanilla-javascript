@@ -1,0 +1,1 @@
+# beastiary-vanilla-javascript
