@@ -124,48 +124,8 @@ INDIVIDUAL PAGES
 }
 
 /* ABOUT PAGE*/
-#about-content-main{
-  /* border: 3px solid pink; */
-  display: inline-flex;
-  margin: 3em;
 
-}
-#about-left{
-  /* border: 3px solid green;  */
-  display:inline-block;
-  max-width:60%;
-  height:100%;
-  text-align: left;
-  
-}
-#about-right{
-  /* border: 3px solid green;  */
-  display:inline-block;
-  max-width: 40%;
-  height:100%;
-}
-#about-me-parent{
-  /* border: 3px solid grey;  */
-  margin: 2em;  
-  padding: 5em 0 0 0;
-}
-.about-me{
 
-  /* border: 3px solid yellow;  */
-}
-#about-headshot{
-  padding: 2em;
-  width:100%;
-}
-#about-me-1{
-  /* border: 3px solid green;  */
-}
-#about-me-2{
-  margin: 1em 0 1em 0;
-}
-#about-me-3{
-  
-}
 /* Monsters PAGE */
 .monsters-content-wrapper{
   margin:0 0 3em 0;
@@ -184,7 +144,7 @@ font-family: 'Poppins', sans-serif;
 .monsters-wrapper{
   border: 3px solid purple; 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   width:90%;
   margin: 0 auto;
 }
@@ -216,7 +176,7 @@ width: 100%;
 }
 @media screen and (max-width:768px){
   body{
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
   }
   .nav-links{
     /* border: 3px solid pink; */
@@ -224,12 +184,12 @@ width: 100%;
     position: absolute;
     right: 0px;
     /* height: 93.5vh;*/
-    height: calc(100vh - 48px); 
+    height: 4em; 
     top: 3em;
-    width: 50%;
+    width: 100vw;
     background-color: black;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     transform: translate(100%);
     transition: transform 0.8s ease-in;
@@ -246,17 +206,17 @@ width: 100%;
   }
 }
 .nav-active{
-  transform: translateY(0%)
+  transform: translateX(0%)
 }
 
 @keyframes navLinkFade{
   from{
 opacity: 0;
-transform:translateY(50px);
+transform:translateX(100vw);
   }
     to{
     opacity:1;
-    transform: translateY(0px)
+    transform: translateX(0px)
   }
 }
 
