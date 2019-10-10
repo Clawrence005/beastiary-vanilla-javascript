@@ -7,6 +7,9 @@
 body{
   background-color: white;
 }
+img {
+  display: block;
+}
 /* NAVBAR */
 nav{
   display:flex;
