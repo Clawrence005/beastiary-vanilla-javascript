@@ -42,6 +42,13 @@ nav{
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
+
+} 
+.name a{ 
+  list-style: none;
+  text-decoration: none;
+  text-decoration-color: none;
+  color: white;
 }
 .nav-links{
   /* border: 3px solid blue; */
@@ -118,25 +125,45 @@ INDIVIDUAL PAGES
 */
 
 /* HOME */
-.my-face{
-    border: 3px solid purple; 
-    width: 40%;
+.index-content{
+  /* border: 3px solid yellow;  */
+  padding:0 0 3em 0;
 }
 
-/* ABOUT PAGE*/
+.about-headline{
+  text-align: center;
+  /* font-family: 'Vidaloka', serif; */
+  font-family: 'Poppins', sans-serif;
+  font-size: 3em;
+  border: 3px solid blue; 
+}
+.about-blurb{
+  margin: auto;
+  font-size:1.5em;
+  border: 3px solid red; 
+  width: 70%;
+}
+ /*.hero-div{ 
+  border: 3px solid purple; 
+} */
 
+.hero-div > img {
+  width: 100%;
+  max-height: 400px
+}
 
 /* Monsters PAGE */
-.monsters-content-wrapper{
+/* .monsters-content-wrapper{
   margin:0 0 3em 0;
-}
+} */
 .monsters-content-wrapper > div {
   text-align: center;
 }
 
 .monsters-headline{
 /* border: 3px solid grey;  */
-padding: 1em;
+padding: 5px;
+font-size: 4em;
 text-align: center;
 text-transform: uppercase;
 font-family: 'Poppins', sans-serif;
@@ -149,7 +176,7 @@ font-family: 'Poppins', sans-serif;
   margin: 0 auto;
 }
 .monsters{
-  /* margin: 1em; */
+  margin: 1.5em;
   /* height: 222px; */
   border: 3px solid green; 
   text-decoration: none;
@@ -160,24 +187,18 @@ width: 100%;
 }
 
 @media screen and (max-width: 1024px){
+  body{
+    overflow-x: hidden;
+  }
   .nav-links{
     width: 50%; 
     margin-right: 12px;
   }
-  #about-left{
-    display: flex;
-    width:100%;
-  }
-  #about-right{
-    display: flex;
-    width:100%;
-  }
-  /* left needs to be on top */
 }
 @media screen and (max-width:768px){
-  body{
-    /* overflow-y: hidden; */
-  }
+body{
+  overflow-x: hidden;
+}
   .nav-links{
     /* border: 3px solid pink; */
     margin-right: 0px;
@@ -231,11 +252,6 @@ transform: rotate(-45deg) translate(-5px, 6px)
 }
 
 
-#about-left{
-  display: inline-flex;
-  width:100%;
-}
-#about-right{
-  display: inline-flex;
-  width:100%;
+.monsters{
+  margin: 0 0 1.5em;
 }
