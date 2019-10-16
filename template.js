@@ -28,13 +28,12 @@ const monsterData = [
   }, {
     name: "Nixies",
     description: "e",
-    foods: ['cats', 'humans', 'goats'],
     location: "a",
     photo: "./assets/e4e8ebdc.jpg",
   }, {
     name: "Bodach",
     description: "f",
-    foods: ['cats', 'humans', 'goats'],
+    // foods: ['cats', 'humans', 'goats'],
     location: "a",
     photo: "./assets/0d415c72a02ca63254db865c1d0c1f96.gif",
   }, {
@@ -61,11 +60,11 @@ const monsterData = [
 function foods(foods) {
   return `
  <h4>Favorite Foods</h4>
+ <ul>
 ${foods.map(function (food) {
-    `<li>${foods}</li>`
+    return `<li>${food}</li>`
   }).join('')}
-
-  
+  </ul>
   `
 }
 
@@ -95,6 +94,7 @@ function monsterTemplate(monsterData) {
     </a>
     <p class="monster-location">${monsterData.location}</p>
     <p class="monster-description">${monsterData.isMalicious ? isMalicious() : isBenign()}</p>
+    ${monsterData.foods ? foods(monsterData.foods) : ""}
   </div>
   `
 }
