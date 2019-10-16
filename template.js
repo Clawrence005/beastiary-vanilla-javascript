@@ -38,6 +38,7 @@ const monsterData = [
     photo: "./assets/0d415c72a02ca63254db865c1d0c1f96.gif",
   }, {
     name: "Jackalope",
+    malicious: false,
     description: "f",
     foods: ['cats', 'humans', 'goats'],
     location: "a",
@@ -45,13 +46,16 @@ const monsterData = [
   },
   {
     name: "Lamia",
+    malicious: true,
     description: "female child eating serpent tailed monsters",
+    foods: ['children'],
     location: "ancient Greece",
     photo: "./assets/0d415c72a02ca63254db865c1d0c1f96.gif",
   }, {
     name: "Lilitu",
+    malicious: true,
     description: "also known as Lillith in the Bible, was a mesopotamian monster that fed on babies.",
-    foods: ['cats', 'humans', 'goats'],
+    foods: ['children'],
     location: "ancient Mesopotamia",
     photo: "./assets/0d415c72a02ca63254db865c1d0c1f96.gif",
   },
@@ -69,19 +73,13 @@ ${foods.map(function (food) {
 }
 
 function isMalicious() {
-  if (monsterData.malicious === true) {
-    return `
+  return `
   <h3>malicious to humans</h3>
   `
-  }
-  //   else {
-  //     return `
-  // <h3>benign to humans</h3>
-  // `}
 }
 function isBenign() {
   return `
-  <h3>malicious to humans</h3>
+  <h3>benign to humans</h3>
   `
 }
 
@@ -92,8 +90,9 @@ function monsterTemplate(monsterData) {
     <a href="">
     <img src="${monsterData.photo}" alt="${monsterData.name}'s photo" width="400px" class="monster-image"> 
     </a>
-    <p class="monster-location">${monsterData.location}</p>
-    <p class="monster-description">${monsterData.isMalicious ? isMalicious() : isBenign()}</p>
+    <p class="monster-location">
+    location: ${monsterData.location}</p>
+    <p class="monster-description">${monsterData.malicious === true ? isMalicious() : isBenign()}</p>
     ${monsterData.foods ? foods(monsterData.foods) : ""}
   </div>
   `
