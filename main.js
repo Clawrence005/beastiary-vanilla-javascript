@@ -1,9 +1,11 @@
+// this page deals with the responsive navbar
 const navSlide = () => {
   const burger = document.querySelector('.burger');
   const nav = document.querySelector('.nav-links');
   const navLinks = document.querySelectorAll('.nav-links li');
   // toggle nav links
-  burger.addEventListener('click', () => {
+  burger.addEventListener('click', (e) => {
+    e.preventDefault();
     nav.classList.toggle('nav-active')
 
     //animate links

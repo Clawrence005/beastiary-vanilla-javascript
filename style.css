@@ -1,9 +1,20 @@
+:root{
+  --nav-logo-color:#5f54b3;
+  --navbar-text-color:white;
+  --footer-text-color:white;
+  --navbar-bg-color:black;
+  --resp-navbar-bg-color: black ;
+  --footer-bg-color:black;
+}
 *{
   margin: 0px;
   padding:0px;
   box-sizing: border-box;
 }
 
+img.logo{
+  background-color: var(--nav-logo-color);
+}
 body{
   background-color: white;
 }
@@ -17,8 +28,7 @@ nav{
   align-items: center;
   /* min-height: 3em; */
   height: 48px;
-  color: white;
-  background-color: black;
+  background-color: var(--navbar-bg-color);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -30,7 +40,7 @@ nav{
   /* border: 3px solid red; */
   position: absolute;
   left: 2px;
-  color: white;
+  /* color: var(--navbar-text-color); */
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
@@ -41,7 +51,6 @@ nav{
   /* border: 3px solid blue; */
   position: absolute;
   left: 60px;
-  color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 20px;
@@ -51,7 +60,7 @@ nav{
   list-style: none;
   text-decoration: none;
   text-decoration-color: none;
-  color: white;
+  color: var(--navbar-text-color);
 }
 .nav-links{
   /* border: 3px solid blue; */
@@ -66,7 +75,7 @@ nav{
   list-style: none;
 }
 .nav-links a{
-  color:white;  
+  color: var(--navbar-text-color);
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
@@ -81,7 +90,7 @@ nav{
 .burger div{
   width: 25px;
   height: 3px;
-  background-color: white;
+  background-color: var(--navbar-text-color);
   margin: 5px;
   transition: all 0.3s ease;
   
@@ -98,7 +107,7 @@ footer{
   justify-content: space-around;
   align-items: center;
   height: 10em;
-  background-color: black;
+  background-color: var(--footer-bg-color);
   font-family: 'Poppins', sans-serif;
 }
 
@@ -116,7 +125,7 @@ footer{
 }
 
 .footer-links a{
-  color: white;  
+  color: var(--footer-text-color);
   text-decoration: none;
   letter-spacing: 3px;
   font-weight: bold;
@@ -172,15 +181,20 @@ text-align: center;
 text-transform: uppercase;
 font-family: 'Poppins', sans-serif;
 }
+.monster-name{
+  border: 3px solid black; 
+  text-align: center;
+  padding: .5em;
+}
 .monsters-wrapper{
   border: 3px solid purple; 
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   width:90%;
   margin: 0 auto;
 }
 .monsters{
-  margin: 1.5em;
+  margin:20px;
   /* height: 222px; */
   border: 3px solid green; 
   text-decoration: none;
@@ -263,7 +277,7 @@ body{
     height: 4em; 
     top: 3em;
     width: 100vw;
-    background-color: black;
+    background-color:   var(--resp-navbar-bg-color);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -307,6 +321,6 @@ transform: rotate(-45deg) translate(-5px, 6px)
 }
 
 
-.monsters{
+/* .monsters{
   margin: 0 0 1.5em;
-}
+} */

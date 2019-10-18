@@ -15,9 +15,10 @@ const monsterData = [
     photo: "./assets/12271233430751.56aaa2bdaf27f.png",
   }, {
     name: "la Llorona",
-    description: "c",
-    foods: ['cats', 'humans', 'goats'],
-    location: "found along rivers and ditches thoughout the Spanish speaking 'Americas'.",
+    description: "A sprectral 'wailing woman' in Spanish she haunts river and ditch banks searching for the children she drowned in madness.",
+    malicious: true,
+    foods: ['children'],
+    location: "found along rivers and ditches thoughout the Spanish speaking regions of the Americas.",
     photo: "./assets/e4e8ebdc.jpg",
   }, {
     name: "Manticore",
@@ -43,8 +44,7 @@ const monsterData = [
     foods: ['cats', 'humans', 'goats'],
     location: "a",
     photo: "./assets/0d415c72a02ca63254db865c1d0c1f96.gif",
-  },
-  {
+  }, {
     name: "Lamia",
     malicious: true,
     description: "female child eating serpent tailed monsters",
@@ -57,6 +57,13 @@ const monsterData = [
     description: "also known as Lillith in the Bible, was a mesopotamian monster that fed on babies.",
     foods: ['children'],
     location: "ancient Mesopotamia",
+    photo: "./assets/0d415c72a02ca63254db865c1d0c1f96.gif",
+  }, {
+    name: "Scott",
+    malicious: true,
+    description: "drinks vodka sodas",
+    foods: ['children, vodka'],
+    location: "nearest the grand,",
     photo: "./assets/0d415c72a02ca63254db865c1d0c1f96.gif",
   },
 ];
@@ -87,13 +94,15 @@ function monsterTemplate(monsterData) {
   return `
   <div class="monsters">
   <h2 class="monster-name"> ${monsterData.name}</h2>
-    <a href="">
+    <a href="./${monsterData.name}">
     <img src="${monsterData.photo}" alt="${monsterData.name}'s photo" width="400px" class="monster-image"> 
     </a>
-    <p class="monster-location">
-    location: ${monsterData.location}</p>
-    <p class="monster-description">${monsterData.malicious === true ? isMalicious() : isBenign()}</p>
-    ${monsterData.foods ? foods(monsterData.foods) : ""}
+    ${monsterData.malicious === true ? isMalicious() : isBenign()}
+    <p class="monster-description">${monsterData.description}</p>
+
+    ${monsterData.foods ? foods(monsterData.foods) : ""}  
+      <h4 class="monster-location">
+    Location </h4><span>${monsterData.location}</span>
   </div>
   `
 }
@@ -103,3 +112,5 @@ document.getElementById("app").innerHTML = `
     ${monsterData.map(monsterTemplate).join('')}
   </div>
 `;
+
+
