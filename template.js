@@ -66,6 +66,14 @@ const monsterData = [
     location: "nearest the grand,",
     photo: "./assets/0d415c72a02ca63254db865c1d0c1f96.gif",
   },
+  {
+    name: "Jessi",
+    malicious: false,
+    description: "haunts the library and eats vegan pizza",
+    foods: ['classic cocktails', 'vegan pizza'],
+    location: "near north loop,",
+    photo: "./assets/0d415c72a02ca63254db865c1d0c1f96.gif",
+  }
 ];
 
 function foods(foods) {
