@@ -105,7 +105,7 @@ function monsterTemplate(monsterData) {
     <a href="./${monsterData.name}">
     <img src="${monsterData.photo}" alt="${monsterData.name}'s photo" width="400px" class="monster-image"> 
     </a>
-    ${monsterData.malicious === true ? isMalicious() : isBenign()}
+    ${monsterData.malicious ? isMalicious() : isBenign()}
     <p class="monster-description">${monsterData.description}</p>
 
     ${monsterData.foods ? foods(monsterData.foods) : ""}  
@@ -114,6 +114,14 @@ function monsterTemplate(monsterData) {
   </div>
   `
 }
+
+// function monsterPage(data, clickedMonsterName)
+//   return "<div class='monsters'>" +
+//     MONSTER PROFILE:
+//       NAME ${data[clickedMonsterName].name}
+//       HEIGHT ${data[clickedMonsterName].tall}
+//       SCARED OF ${data[clickedMonsterName].thing}
+//     "</div>"
 
 document.getElementById("app").innerHTML = `
   <div class="monsters-wrapper">
